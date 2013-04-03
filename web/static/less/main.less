@@ -1,0 +1,93 @@
+//@import "ink.less";
+@import "elements.less";
+
+//VARIABLES
+
+
+//MIXINS
+.title-font () {font-family:'Open Sans Condensed',sans-serif;font-size:30px;font-weight:700;text-transform:uppercase;color:#333;}
+.body-font () {font-family:'Open Sans',sans-serif;font-size:16px;text-transform:none;color:#333;}
+.article-font () {font-family:'Lora','Georgia',serif;}
+
+
+
+
+
+
+
+* {-webkit-font-smoothing:antialiased;}
+ul {list-style-type:none;}
+a {
+    &:hover {text-decoration:none;}
+}
+h1,h2,h3,h4,h5,h6 {margin:0;.title-font;}
+h3 {font-size:20px;}
+
+body {.body-font;}
+
+
+
+/*** HEADER ***/
+#main {
+    > header {height:100px;padding:15px 0;
+        #logo {display:block;width:200px;height:70px;background:#EEE;}
+    }
+
+    > footer {height:50px;background:#AAD22D;border:none;}
+}
+
+.thumb {display:block;min-height:100px;background:#EEE;
+    &:hover {
+        img {-webkit-filter:grayscale(1);}
+    }
+}
+
+.article {display:block;position:relative;
+    &.full-image {
+        .details {position:absolute;left:0;bottom:10px;max-width:80%;padding:5px 10px;background:rgba(0,0,0,0.7);color:#FFF;
+            .title {color:#FFF;}
+            .teaser {margin:0;font-size:14px;display:none;}
+        }
+        &:hover {
+            .thumb {
+                img {-webkit-filter:grayscale(1);}
+            }
+            //.details {background:rgba(170,210,45,0.8)}
+        }
+    }
+    .title {color:#333;
+        a {color:#333;}
+    }
+}
+
+#homepage {
+    .now {
+        .nr2, .nr4 {margin-bottom:6%}
+    }
+
+    .today {
+        li {
+            .thumb {margin:0 0 5px 0;}
+            .teaser {margin:0;font-size:14px;}
+        }
+    }
+
+    .categories {
+        > li {
+            h2 {}
+            ul {padding:0;list-style-type:none;
+                li {
+                    .title {.body-font;}
+                    .source {margin:0;}
+                }
+            }
+        }
+    }
+
+    .newspapers {
+        h3 {display:none;}
+        .thumb {outline:5px solid #FFF;box-shadow:0 0 0 6px rgba(0,0,0,0.05);
+            &:hover {box-shadow:0 0 0 6px rgba(0,0,0,0.8);}
+        }
+    }
+}

@@ -1,0 +1,125 @@
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+* {
+  -webkit-font-smoothing: antialiased;
+}
+ul {
+  list-style-type: none;
+}
+a:hover {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333;
+}
+h3 {
+  font-size: 20px;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  text-transform: none;
+  color: #333;
+}
+/*** HEADER ***/
+#main > header {
+  height: 100px;
+  padding: 15px 0;
+}
+#main > header #logo {
+  display: block;
+  width: 200px;
+  height: 70px;
+  background: #EEE;
+}
+#main > footer {
+  height: 50px;
+  background: #AAD22D;
+  border: none;
+}
+.thumb {
+  display: block;
+  min-height: 100px;
+  background: #EEE;
+}
+.thumb:hover img {
+  -webkit-filter: grayscale(1);
+}
+.article {
+  display: block;
+  position: relative;
+}
+.article.full-image .details {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  max-width: 80%;
+  padding: 5px 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #FFF;
+}
+.article.full-image .details .title {
+  color: #FFF;
+}
+.article.full-image .details .teaser {
+  margin: 0;
+  font-size: 14px;
+  display: none;
+}
+.article.full-image:hover .thumb img {
+  -webkit-filter: grayscale(1);
+}
+.article .title {
+  color: #333;
+}
+.article .title a {
+  color: #333;
+}
+#homepage .now .nr2,
+#homepage .now .nr4 {
+  margin-bottom: 6%;
+}
+#homepage .today li .thumb {
+  margin: 0 0 5px 0;
+}
+#homepage .today li .teaser {
+  margin: 0;
+  font-size: 14px;
+}
+#homepage .categories > li ul {
+  padding: 0;
+  list-style-type: none;
+}
+#homepage .categories > li ul li .title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  text-transform: none;
+  color: #333;
+}
+#homepage .categories > li ul li .source {
+  margin: 0;
+}
+#homepage .newspapers h3 {
+  display: none;
+}
+#homepage .newspapers .thumb {
+  outline: 5px solid #FFF;
+  box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.05);
+}
+#homepage .newspapers .thumb:hover {
+  box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.8);
+}
